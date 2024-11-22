@@ -6,7 +6,7 @@ TIMES=4
 
 echo 'Checking pvedev1 status'
 
-ping $SERVER -c $TIMES -i &> /dev/null
+ping $SERVER -c 4 &> pingresults.txt
 RESULT=$?
 
 if [ $RESULT -eq 0 ]; then
@@ -15,5 +15,4 @@ if [ $RESULT -eq 0 ]; then
 else
     echo 'system is down'
     exit 1
-
 fi
