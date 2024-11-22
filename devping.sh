@@ -9,6 +9,8 @@ echo 'Checking pvedev1 status'
 ping $SERVER -c 4 &> pingresults.txt
 RESULT=$?
 
+cat pingresults.txt
+
 if [ $RESULT -eq 0 ]; then
     echo 'System is up'
     exit 0
